@@ -1,0 +1,34 @@
+version: "3"
+services:
+  server1:
+    image: nginx
+    volumes:
+      - ./docroot1:/usr/share/nginx/html
+    expose:
+      - '80' 
+    networks:
+      - proxy_network  
+    container_name: server1
+   
+  server2:
+    image: nginx
+    volumes:
+      - ./docroot2:/usr/share/nginx/html
+    expose:
+      - '80' 
+    networks:
+      - proxy_network
+    container_name: server2
+  
+  server3:
+    image: nginx
+    volumes:
+      - ./docroot3:/usr/share/nginx/html
+    expose:
+      - '80' 
+    networks:
+      - proxy_network
+    container_name: server3
+
+networks: 
+  proxy_network:

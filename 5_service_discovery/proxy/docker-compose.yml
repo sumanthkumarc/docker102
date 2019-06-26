@@ -1,0 +1,15 @@
+version: "3"
+services:
+  proxy:
+    image: haproxy
+    ports:
+      - '80:80'
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+    networks:
+      - proxy_network
+
+networks:
+  proxy_network:
+    external:
+      name: 5servicediscovery_proxy_network
