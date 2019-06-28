@@ -31,4 +31,4 @@ services:
     container_name: server3
 
 networks: 
-  proxy_network:
+  proxy_network:    

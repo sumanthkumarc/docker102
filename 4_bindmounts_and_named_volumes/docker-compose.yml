@@ -16,6 +16,9 @@ services:
     image: postgres:9.6    
     environment:
       POSTGRES_PASSWORD: test
+    volumes:
+      - db_data:/var/lib/postgresql/data
     restart: always
 volumes:
   sites_dir:
+  db_data:

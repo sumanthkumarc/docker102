@@ -12,4 +12,4 @@ services:
 networks:
   proxy_network:
     external:
-      name: 5servicediscovery_proxy_network
+      name: 5_service_discovery_proxy_network
